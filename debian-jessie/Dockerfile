@@ -9,11 +9,11 @@ RUN apt-get update && apt-get install -y \
   supervisor \
   rdiff-backup \
   screen \
-  openjdk-8-jre-headless \
   rsync \
   git \
   curl \
   rlwrap \
+  && apt-get install -y -t jessie-backports openjdk-8-jre-headless ca-certificates-java \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #install node from nodesource
