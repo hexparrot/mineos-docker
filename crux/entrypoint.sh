@@ -37,8 +37,10 @@ useradd -Ums /bin/false -u $USER_UID $USER_NAME
 echo "$USER_NAME:$USER_PASSWORD" | chpasswd
 echo >&2 "Created user: $USER_NAME"
 
-echo >&2 "Generating Self-Signed SSL..."
-sh /usr/games/minecraft/generate-sslcert.sh
+if [ ! -f /etc/ssl/certs/mineos.crt ]; then
+  echo >&2 "Generating Self-Signed SSL..."
+  sh /usr/games/minecraft/generate-sslcert.sh
+fi
 
 cd /usr/games/minecraft && git fetch && git merge origin/master
 
