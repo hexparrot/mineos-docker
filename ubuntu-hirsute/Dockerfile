@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
   supervisor \
   rdiff-backup \
   screen \
-  openjdk-17-jre-headless \
+  openjdk-16-jre-headless \
   rsync \
   git \
   curl \
