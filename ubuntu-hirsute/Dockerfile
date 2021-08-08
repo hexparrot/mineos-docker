@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
   git \
   curl \
   rlwrap \
+  unzip \
   build-essential \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
